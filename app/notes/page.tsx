@@ -1,4 +1,4 @@
-import Note from "@/components/Note";
+import NotePage from "@/components/Note";
 import { PbNote } from "@/types";
 
 const getNotes = async () => {
@@ -19,7 +19,7 @@ const Notes = async () => {
 
       <div className="grid">
         {notes?.map((note) => {
-          return <Note key={note.id} note={note} />;
+          return <NotePage key={note.id} note={note} />;
         })}
       </div>
     </div>

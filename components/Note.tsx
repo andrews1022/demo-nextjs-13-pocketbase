@@ -5,7 +5,7 @@ type NoteProps = {
   note: PbNote;
 };
 
-const Note = ({ note }: NoteProps) => {
+const NotePage = ({ note }: NoteProps) => {
   const { content, created, id, title } = note;
 
   return (
@@ -19,4 +19,4 @@ const Note = ({ note }: NoteProps) => {
   );
 };
 
-export default Note;
+export default NotePage;
