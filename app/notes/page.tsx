@@ -1,5 +1,6 @@
 import NotePage from "@/components/Note";
 import { PbNote } from "@/types";
+import CreateNote from "../../components/CreateNote";
 
 const getNotes = async () => {
   const url = "http://127.0.0.1:8090/api/collections/note/records?page=1&perPage=30";
@@ -10,7 +11,7 @@ const getNotes = async () => {
   return data?.items as PbNote[];
 };
 
-const Notes = async () => {
+const NotesPage = async () => {
   const notes = await getNotes();
 
   return (
@@ -22,8 +23,10 @@ const Notes = async () => {
           return <NotePage key={note.id} note={note} />;
         })}
       </div>
+
+      <CreateNote />
     </div>
   );
 };
 
-export default Notes;
+export default NotesPage;
