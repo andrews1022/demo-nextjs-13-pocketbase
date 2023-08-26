@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import type { ChangeEvent } from "react";
 
 const CreateNote = () => {
   const [title, setTitle] = useState("");
@@ -23,26 +24,25 @@ const CreateNote = () => {
     });
 
     // reset state
-    setContent("");
     setTitle("");
+    setContent("");
 
     router.refresh();
+  };
+
+  const handleTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  };
+
+  const handleContentChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setContent(event.target.value);
   };
 
   return (
     <form onSubmit={create}>
       <h3>Create a note</h3>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(event) => setTitle(event.target.value)}
-      />
-      <textarea
-        placeholder="Content"
-        value={content}
-        onChange={(event) => setContent(event.target.value)}
-      />
+      <input type="text" placeholder="Title" value={title} onChange={handleTitleChange} />
+      <textarea placeholder="Content" value={content} onChange={handleContentChange} />
       <button type="submit">Create note</button>
     </form>
   );
