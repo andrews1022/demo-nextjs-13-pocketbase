@@ -19,12 +19,12 @@ a {
 }
 
 main {
-  min-height: 100vh;
-  padding: 1rem 0;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  min-height: 100vh;
+  padding: 1rem 0;
 }
 
 input,
@@ -38,11 +38,11 @@ button {
   background-color: #000000;
   border: none;
   color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
   padding: 0.5rem 2rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
 }
 
 nav a {
@@ -52,33 +52,34 @@ nav a {
 }
 
 .pageTitle {
-  margin: 0;
-  line-height: 1.15;
   font-size: 4rem;
+  line-height: 1.15;
+  margin: 0;
 }
 
 .grid {
-  margin-top: 2rem;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin-top: 2rem;
   max-width: 1000px;
 }
 
 .action {
+  color: #1e90ff;
   text-align: left;
-  color: dodgerblue;
 }
 
 .note {
-  height: auto;
-  width: 200px;
-  padding: 0.2rem 1rem;
-  margin: 0.5rem;
-  background: #ffff00;
-  box-shadow: 4px 4px 8px 1px #00000075;
+  background: #fafad2;
   border-radius: 2px;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.15);
+  height: auto;
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 200px;
 }
 
 .container {
@@ -86,21 +87,14 @@ nav a {
 }
 
 .pageTitle {
-  margin: 0;
-  line-height: 1.15;
   font-size: 3rem;
-}
-
-.note {
-  height: auto;
-  width: 200px;
-  padding: 0.25rem;
-  border-radius: 2px;
+  line-height: 1.15;
+  margin: 0;
 }
 
 .title {
-  padding: 0.1rem;
   font-size: 1rem;
+  padding: 0.1rem;
 }
 
 .content {
@@ -114,6 +108,6 @@ nav a {
 }
 
 .action {
+  color: #1e90ff;
   text-align: left;
-  color: dodgerblue;
 }

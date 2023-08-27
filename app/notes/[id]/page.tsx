@@ -1,9 +1,8 @@
 import { PbNote } from "@/types";
 
-const getNote = async (noteId: string) => {
+const getNote = async (noteId: string): Promise<PbNote> => {
   const res = await fetch(`http://127.0.0.1:8090/api/collections/note/records/${noteId}`);
-  const data = await res.json();
-  return data as PbNote;
+  return res.json();
 };
 
 type SingleNotePageProps = {
